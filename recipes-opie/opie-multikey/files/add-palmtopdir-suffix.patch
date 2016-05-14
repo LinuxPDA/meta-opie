@@ -1,0 +1,21 @@
+diff --git a/multikey.pro b/multikey.pro
+index 4ad1923..c86e7e4 100644
+--- a/multikey.pro
++++ b/multikey.pro
+@@ -7,12 +7,12 @@ SOURCES	=   keyboard.cpp \
+             configdlg.cpp \
+ 	    keyboardimpl.cpp
+ TARGET		= qmultikey
+-DESTDIR		= $(OPIEDIR)/plugins/inputmethods
++DESTDIR		= $(OPIEDIR)$(palmtopdir)/plugins/inputmethods
+ INCLUDEPATH += $(OPIEDIR)/include
+ DEPENDPATH      +=  ../../launcher
+-LIBS            += -lqpe -L$(OPIEDIR)/plugins/inputmethods -lqpickboard -lqtaux2 -lopiecore2 -lopieui2
+-QMAKE_LFLAGS	+= -Wl,-rpath,$(palmtopdir)/plugins/inputmethods
++LIBS            += -lqpe -L$(OPIEDIR)$(palmtopdir)/plugins/inputmethods -lqpickboard -lqtaux2 -lopiecore2 -lopieui2
++QMAKE_LFLAGS	+= -Wl,-rpath,$(palmtopdir)/plugins/inputmethods
+ VERSION		= 1.0.0
+ 
+-include( $(OPIEDIR)/include.pro )
++include( $(OPIEDIR)$(palmtopdir)/include.pro )
+ target.path = $$prefix/plugins/inputmethods

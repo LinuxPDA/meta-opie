@@ -5,6 +5,8 @@ PR = "r5"
 
 SRC_URI = "${OPIE_GIT};protocol=git;subpath=inputmethods/multikey;name=first \
            ${OPIE_GIT};protocol=git;subpath=share \
-           file://fix-rpath.patch"
+           file://fix-rpath.patch \
+           file://add-palmtopdir-suffix.patch \
+           "
 
 #           file://friendly-button-names.patch"
